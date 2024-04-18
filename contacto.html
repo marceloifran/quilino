@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Oficinas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            padding: 20px;
+            border-radius: 30px; /* Ajuste de border-radius */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.5s ease;
+            border-radius: 30px; /* Ajuste de border-radius */
+            overflow: hidden; /* Ocultar parte del texto */
+        }
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al hacer hover */
+        }
+        .menu-item .icon {
+            padding: 10px;
+            color: white;
+            transition: background-color 0.5s ease;
+            border-radius: 30px; /* Ajuste de border-radius */
+        }
+        .menu-item .icon i {
+            font-size: 20px;
+        }
+        .menu-item:hover .icon {
+            background-color: white;
+            color: #2196f3; /* Azul al hacer hover */
+        }
+        .menu-item-text {
+            display: none;
+            transition: opacity 1s ease;
+            padding: 5px 10px; /* Ajuste del padding */
+            border-radius: 30px; /* Ajuste de border-radius */
+            background-color: #2196f3; /* Color de fondo al hacer hover */
+            color: white; /* Texto blanco al hacer hover */
+            white-space: nowrap; /* Evitar que el texto se ajuste */
+        }
+        .menu-item:hover .menu-item-text {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Aquí va el contenido de la página, incluyendo la sección de contactos -->
+
+    <div class="menu">
+        <a href="pagina1.html" class="menu-item">
+            <div class="icon home-icon"><i class="ri-home-line"></i></div>
+            <span class="menu-item-text">Inicio</span>
+        </a>
+        <a href="pagina2.html" class="menu-item">
+            <div class="icon settings-icon"><i class="ri-settings-5-line"></i></div>
+            <span class="menu-item-text">Configuración</span>
+        </a>
+        <a href="pagina3.html" class="menu-item">
+            <div class="icon user-icon"><i class="ri-user-line"></i></div>
+            <span class="menu-item-text">Perfil</span>
+        </a>
+        <a href="pagina4.html" class="menu-item">
+            <div class="icon folder-icon"><i class="ri-folder-line"></i></div>
+            <span class="menu-item-text">Documentos</span>
+        </a>
+        <a href="pagina5.html" class="menu-item">
+            <div class="icon alarm-icon"><i class="ri-alarm-line"></i></div>
+            <span class="menu-item-text">Recordatorios</span>
+        </a>
+        <a href="pagina6.html" class="menu-item">
+            <div class="icon mail-icon"><i class="ri-mail-line"></i></div>
+            <span class="menu-item-text">Correo</span>
+        </a>
+    </div>
+
+</body>
+</html>

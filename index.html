@@ -147,27 +147,23 @@
                <article class="popular__card">
                   <div class="popular__bg"></div>
 
-                  <img src="assets/img/multitud.png" alt="image" class="popular__img">
+                  <img src="assets/img/team-building.png" alt="image" class="popular__img">
                   <h3 class="popular__title">Desarollo Social</h3>
                   <span class="popular__subtitle">Seccion de Desarollo Social</span>
-                  <!-- <h3 class="popular__price">$5.00</h3> -->
-
-                  <button class="popular__button button">
+                  <a href="social.html" class="popular__button button">
                      <i class="ri-arrow-right-circle-line"></i>
-                  </button>
+                  </a>
                </article>
 
                <article class="popular__card">
                   <div class="popular__bg"></div>
 
-                  <img src="assets/img/agenda.png" alt="image" class="popular__img">
+                  <img src="assets/img/agenda (1).png" alt="image" class="popular__img">
                   <h3 class="popular__title">Agenda</h3>
                   <span class="popular__subtitle">Agenda Cultural</span>
-                  <!-- <h3 class="popular__price">$3.00</h3> -->
-
-                  <button class="popular__button button">
+                  <a href="agendacultural.html" class="popular__button button">
                    <i class="ri-arrow-right-circle-line"></i>
-                  </button>
+                  </a>
                </article>
 
                <article class="popular__card">
@@ -176,11 +172,9 @@
                   <img src="assets/img/galeria.png" alt="image" class="popular__img">
                   <h3 class="popular__title">Galeria</h3>
                   <span class="popular__subtitle">Galeria de imagenes</span>
-                  <!-- <h3 class="popular__price">$8.00</h3> -->
-
-                  <button class="popular__button button">
+                  <a href="galeria.html" class="popular__button button">
                    <i class="ri-arrow-right-circle-line"></i>
-                  </button>
+                  </a>
                </article>
 
                <article class="popular__card">
@@ -189,11 +183,9 @@
                   <img src="assets/img/saludable.png" alt="image" class="popular__img">
                   <h3 class="popular__title">Salud</h3>
                   <span class="popular__subtitle">Seccion de Salud</span>
-                  <!-- <h3 class="popular__price">$7.00</h3> -->
-
-                  <button class="popular__button button">
+                  <a href="salud.html" class="popular__button button">
                    <i class="ri-arrow-right-circle-line"></i>
-                  </button>
+                  </a>
                </article>
             </div>
          </section>
@@ -316,16 +308,93 @@
                   </div>
                </div>
             </div>
-
-            <!-- <img src="assets/img/fruit-line-3.png" alt="image" class="footer__fruit">
-            <img src="assets/img/branch-1.png" alt="image" class="footer__branch-1">
-            <img src="assets/img/branch-2.png" alt="image" class="footer__branch-2"> -->
          </div>
 
          <span class="footer__copy">
             &#169; All Rights Reserved By Marcelo Ifran Singh
          </span>
       </footer>
+
+      <div class="menu">
+         <a href="pagina1.html" class="menu-item">
+             <div class="icon home-icon"><i class="ri-home-line"></i></div>
+             <span class="menu-item-text">Inicio</span>
+         </a>
+         <a href="pagina2.html" class="menu-item">
+             <div class="icon settings-icon"><i class="ri-settings-5-line"></i></div>
+             <span class="menu-item-text">Configuración</span>
+         </a>
+         <a href="pagina3.html" class="menu-item">
+             <div class="icon user-icon"><i class="ri-user-line"></i></div>
+             <span class="menu-item-text">Perfil</span>
+         </a>
+         <a href="pagina4.html" class="menu-item">
+             <div class="icon folder-icon"><i class="ri-folder-line"></i></div>
+             <span class="menu-item-text">Documentos</span>
+         </a>
+         <a href="pagina5.html" class="menu-item">
+             <div class="icon alarm-icon"><i class="ri-alarm-line"></i></div>
+             <span class="menu-item-text">Recordatorios</span>
+         </a>
+         <a href="pagina6.html" class="menu-item">
+             <div class="icon mail-icon"><i class="ri-mail-line"></i></div>
+             <span class="menu-item-text">Correo</span>
+         </a>
+     </div>
+     <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+      .menu {
+          position: fixed;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          padding: 20px;
+          border-radius: 30px; /* Ajuste de border-radius */
+          background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+      }
+      .menu-item {
+          margin-bottom: 10px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          transition: background-color 0.5s ease;
+          border-radius: 30px; /* Ajuste de border-radius */
+          overflow: hidden; /* Ocultar parte del texto */
+      }
+      .menu-item:hover {
+          background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al hacer hover */
+      }
+      .menu-item .icon {
+          padding: 10px;
+          color: white;
+          transition: background-color 0.5s ease;
+          border-radius: 30px; /* Ajuste de border-radius */
+      }
+      .menu-item .icon i {
+          font-size: 20px;
+      }
+      .menu-item:hover .icon {
+          background-color: white;
+          color: #2196f3; /* Azul al hacer hover */
+      }
+      .menu-item-text {
+          display: none;
+          transition: opacity 1s ease;
+          padding: 5px 10px; /* Ajuste del padding */
+          border-radius: 30px; /* Ajuste de border-radius */
+          background-color: #2196f3; /* Color de fondo al hacer hover */
+          color: white; /* Texto blanco al hacer hover */
+          white-space: nowrap; /* Evitar que el texto se ajuste */
+      }
+      .menu-item:hover .menu-item-text {
+          display: block;
+          opacity: 1;
+      }
+  </style>
 
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
