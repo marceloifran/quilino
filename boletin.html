@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenanzas y Documentos Municipales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #2C3E50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .documents {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #2C3E50;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accordion-year {
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .accordion-title {
+            font-size: 1.8rem;
+            padding: 20px;
+            margin: 0;
+            color: #fff;
+            background: linear-gradient(to right, #16a085, #27ae60);
+        }
+
+        .accordion-body {
+            padding: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-year.show .accordion-body {
+            max-height: 1000px;
+        }
+
+        .document {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .document:hover {
+            transform: translateY(-5px);
+        }
+
+        .document-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-right: 10px;
+        }
+
+        .document-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .document-link:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+  
+    <section class="documents">
+        <div class="container">
+            <h2 class="section-title">Ordenanzas y Documentos Municipales</h2>
+            <div class="accordion accordion-flush" id="accordionYears">
+                <!-- Acordeón para el año 2024 -->
+                <div class="accordion-year">
+                    <h2 class="accordion-title" id="year2024">2024</h2>
+                    <div class="accordion-body">
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="documentos/ordenanza_1295_2024_0.pdf" target="_blank" class="document-link">Ordenanza 1295</a>
+                        </div>
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="documentos/ordenanza_1296_2024.pdf" target="_blank" class="document-link">Ordenanza 1296</a>
+                        </div>
+                        <!-- Agrega más documentos según sea necesario -->
+                    </div>
+                </div>
+                <!-- Acordeón para el año 2023 -->
+                <div class="accordion-year">
+                    <h2 class="accordion-title" id="year2023">2023</h2>
+                    <div class="accordion-body">
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="#" class="document-link">Documento 1</a>
+                        </div>
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="#" class="document-link">Documento 2</a>
+                        </div>
+                        <!-- Agrega más documentos según sea necesario -->
+                    </div>
+                </div>
+                <!-- Acordeón para el año 2022 -->
+                <div class="accordion-year">
+                    <h2 class="accordion-title" id="year2022">2022</h2>
+                    <div class="accordion-body">
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="#" class="document-link">Documento 1</a>
+                        </div>
+                        <div class="document">
+                            <i class="ri-file-text-fill document-icon"></i>
+                            <a href="#" class="document-link">Documento 2</a>
+                        </div>
+                        <!-- Agrega más documentos según sea necesario -->
+                    </div>
+                </div>
+                <!-- Agrega más años según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const accordions = document.querySelectorAll('.accordion-year');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                accordion.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
