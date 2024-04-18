@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/logoimg-removebg-preview.png" type="image/x-icon">
+
+    <!-- REMIXICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Quilino y Villa Quilino</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.png" alt=""> 
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About Us</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">Popular</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#join" class="nav__link">Join Us</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+
+                <img src="assets/img/branch-2.png" alt="" class="nav__img-1">
+                <img src="assets/img/fruit-line-1.png" alt="" class="nav__img-2">
+            </div>
+
+            <div class="nav__buttons">
+                <!-- Theme button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-apps-2-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- Mensaje de entrada -->
+        <section class="section">
+            <div class="container">
+                <h2>Welcome to Quilino y Villa Quilino</h2>
+                <p>Discover everything about health and wellness in Quilino and Villa Quilino.</p>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="section">
+            <div class="container">
+                <!-- Card 1: Hospital Information -->
+                <div class="card">
+                    <img src="assets/img/hospital.jpg" alt="Hospital" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Hospital Services</h3>
+                        <p class="card__description">Learn about the medical services offered at Hospital Municipal de Quilino.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Health Programs -->
+                <div class="card">
+                    <img src="assets/img/health-programs.jpg" alt="Health Programs" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Health Programs</h3>
+                        <p class="card__description">Discover the health programs available to promote wellness in our community.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Emergency Services -->
+                <div class="card">
+                    <img src="assets/img/hospital.png" alt="Emergency Services" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Emergency Services</h3>
+                        <p class="card__description">Information about emergency medical services and how to access them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <div id="mapid"></div>
+
+        <!-- Texto sobre ubicaciones de hospitales, etc. -->
+        <section class="section">
+            <div class="container">
+                <h2>Find Important Locations</h2>
+                <p>Locate hospitals, pharmacies, and other essential services in Quilino and Villa Quilino using the map below.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <!-- Contenido del footer -->
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!-- SCROLLREVEAL -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Leaflet CDN -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    
+    <script>
+        // Función para inicializar el mapa
+        function initMap() {
+            var hospitalLocation = [-31.902782, -65.252426];
+            var map = L.map('mapid').setView(hospitalLocation, 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            L.marker(hospitalLocation).addTo(map)
+                .bindPopup('Hospital Municipal de Quilino')
+                .openPopup();
+        }
+
+        // Llama a la función initMap cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            initMap();
+        });
+    </script>
+    <style>
+        #mapid {
+            height: 400px; /* Ajusta la altura según sea necesario */
+            width: 100%; /* O ajusta el ancho según sea necesario */
+        }
+    </style>
+</body>
+</html>
